@@ -17,7 +17,7 @@ body {
   background: linear-gradient(var(--primary), #7597de);
 }
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -26,6 +26,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 10000;
+  transition-duration: 0.4s;
 }
 header .logo {
   color: #fff;
@@ -34,6 +35,10 @@ header .logo {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  background-color: transparent;
+}
+header.bg-color {
+  background-color: var(--secondary);
 }
 header ul {
   display: flex;
