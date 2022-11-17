@@ -12,7 +12,6 @@
   scroll-behavior: smooth;
 }
 body {
-  width: 1920px;
   min-height: 100vh;
   overflow-x: hidden;
   background: linear-gradient(var(--primary), #7597de);
@@ -119,6 +118,41 @@ section#home img#mountain_front {
   position: relative;
   padding: 100px;
   background: var(--secondary);
+}
+
+/*============= MEDIA QUERIES =============*/
+
+@media screen and (width <= 568px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+  }
+  header ul li {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  header ul li a {
+    text-decoration: none;
+    padding: 6px 10px;
+  }
+  .logo {
+    display: none;
+  }
+  .sec {
+    padding: 100px 50px;
+  }
+
+  #text {
+    position: absolute;
+    right: -800px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 23vw;
+    z-index: 9;
+  }
 }
 .sec h2 {
   font-size: 3.5em;
