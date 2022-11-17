@@ -21,6 +21,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  margin: 0 auto;
   padding: 30px 100px;
   display: flex;
   justify-content: space-between;
@@ -122,13 +123,14 @@ section#home img#mountain_front {
 
 /*============= MEDIA QUERIES =============*/
 
-@media screen and (width <= 568px) {
+@media screen and (max-width: 568px) {
   header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 30px 50px;
+    justify-content: center;
   }
   header ul li {
     margin-left: 8px;
