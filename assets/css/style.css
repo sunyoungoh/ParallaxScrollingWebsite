@@ -41,6 +41,9 @@ header .logo {
 header.scroll-header {
   background-color: var(--secondary);
 }
+.hide-logo {
+  display: none;
+}
 header ul {
   display: flex;
   justify-content: center;
@@ -62,6 +65,7 @@ header ul li a.active {
   color: var(--primary);
   transition-duration: 0.4s;
 }
+
 section#home {
   position: relative;
   width: 100%;
@@ -120,42 +124,6 @@ section#home img#mountain_front {
   padding: 100px;
   background: var(--secondary);
 }
-
-/*============= MEDIA QUERIES =============*/
-
-@media screen and (max-width: 568px) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 50px;
-    justify-content: center;
-  }
-  header ul li {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  header ul li a {
-    text-decoration: none;
-    padding: 6px 10px;
-  }
-  .logo {
-    display: none;
-  }
-  .sec {
-    padding: 100px 50px;
-  }
-
-  #text {
-    position: absolute;
-    right: -800px;
-    color: #fff;
-    white-space: nowrap;
-    font-size: 23vw;
-    z-index: 9;
-  }
-}
 .sec h2 {
   font-size: 3.5em;
   margin-bottom: 10px;
@@ -170,4 +138,59 @@ footer {
   height: 300px;
   background: var(--secondary);
   text-align: center;
+}
+
+/*============= MEDIA QUERIES =============*/
+
+@media screen and (max-width: 568px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    justify-content: center;
+  }
+  header .logo {
+    font-size: 1.5em;
+  }
+  header ul li {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  header ul li a {
+    text-decoration: none;
+    padding: 6px 10px;
+  }
+  .nav__menu {
+    position: fixed;
+    height: 40px;
+    top: 80px;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .scroll-nav__menu {
+    top: 0px;
+    height: 100px;
+    background: var(--secondary);
+  }
+  .nav__close,
+  .nav__toggle {
+    display: block;
+  }
+  section#home img#moon {
+    top: 80px;
+  }
+  .sec {
+    padding: 100px 50px;
+  }
+
+  #text {
+    position: absolute;
+    right: -800px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 23vw;
+    z-index: 9;
+  }
 }
